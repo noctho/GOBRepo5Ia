@@ -11,6 +11,7 @@ Romen Rene : Activiti
 Marcel Mussner : IRC
 Alexander Niedrist : SourceForge
 Christopher Hopfgartner : Bugzilla 
+Thomas Nocker : Mercurial
 Viktor Gobbi : JIRA
 Thomas Rizzolli : Gradle
 Bernard Simon : Ant
