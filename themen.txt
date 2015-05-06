@@ -15,3 +15,4 @@ Viktor Gobbi : JIRA
 Thomas Rizzolli : Gradle
 Bernard Simon : Ant
 Matthias Prader: Bonita BPM
+Daniel Pazeller: SVN
