@@ -1,0 +1,31 @@
+\documentclass[11pt]{article}
+\usepackage[ngerman]{babel} 
+\usepackage[utf8]{inputenc}
+\begin{document}
+\section{Mercurial}
+Mercurial ist ein verteiltes, programmunabhängiges Versionskontrollsystem.
+
+Angekündigt wurde es von Matt Mackall auf der Linux-Kernel-Mailingliste am 19. April 2005. Diese Ankündigung war die Folge, dass die Firma BitMover, die z. B. für den Linux-Kernel als Versionskontrollsystem eingesetzte Software BitKeeper nicht mehr in einer kostenlosen Version bereitzustellen. Zur selben Zeit startete Linus Torvalds das Projekt Git, das sich aus nachvolziehbaren Gründen besser durchsetzte als Mercurial.
+
+Es ist nahezu in vollständig in Python entwickelt, weshalb es nicht unbeding empfelenswert wäre, Mercurial zu benutzen. Lediglich eine diff-Implementierung, die mit binären Dateien umgehen kann ist in C entwickelt, da das in Python nicht möglich ist. Nichtsdestotrotz sind Effizienz, Skalierbarkeit und robuste Handhabung von Text- und Binärdateien ein Punkte, die bei der Entwicklung als Schwerpunkte festgelegt wurden.
+
+Ähnlich wie Git ist Mercurial kein zentralisiertes Versionskontrollsystem, d.h. man kann ein Repository klonen kann und auf einer lokal Kopie darauf arbeiten kann. Auf dieser Kopie kann man ganz normal auf den die Funktionen von Mercurial verwenden. Ebenso ist die Fähigkeit des Erstellens und Zusammenfügens von Entwicklungszweigen ein fester Bestandteil dieses Versionkontrollsystems.
+
+Einige Namhafte Firmen haben und bei bekannten Projekten wurde Mercurial Eingesetzt. Dazu gehören Facebook, Mozilla (Firefox, Thunderbird), SourceForge, Google Inc. (Google Chrome, Google Code), Atlassian (Bitbucket), Microsoft (Codeplex), Oracle (OpenJDK), Xen, NetBeans IDE, Python und ClearCanvas.  
+
+Man kann sowohl über eine grafische Oberfläche, als auch über die Komandozeile auf die Funktionen von Mercurial zugreifen. Eine grafische Oberfläche wird häufig bei Microsoft Windows, Gnome/Nautilus (jeweils TortoiseHg) und bei Mac OS X (MacHg und Murky). Bei gängigen Entwicklungsumgebungen wie Netbeans, Eclipse, Android Studio oder der Qt Creator erlauben es, ein externes Plugin zu installieren und das User-Interface der Entwicklungsumgebung ist es möglich, auf die Funktionen von Mercurial zuzugreifen.
+\newline
+Über die Kommandozeile kann man über folgende Befehle auf Mercurial zugreifen:
+\begin{itemize}
+\item\textbf{Installation} add, install
+\item\textbf{Clonen}: hg clone <URL>
+\item\textbf{Änderung}: hg revert <Datei>
+\item\textbf{Änderungen bestätigen}: hg commit <Änderungstext>
+\item\textbf{Repository auf den aktuellen Stand bringen}: hg update
+\item\textbf{Branch mischen}: hg merge
+\item\textbf{Versionsgeschichte des Repository erkunden}: hg log -v
+\end{itemize}
+Wie beim bereits im Unterricht behandelten GIT, muss man bei der Bestätigung von Änderungen eine Beschreibung der Änderung angefügt werden. Wenn das automatische Mischen nicht gelingt, muss man man manuell die Konflikte lösen.
+
+Zusammenfassend kann man sagen, dass Mercurial ähnlich dem Versionskontrollsystem Git ist, es gibt keine signifikante Unterschiede. Der größte Unterschied zwischen beiden Systemen ist der Performanceverlusst durch den Python-Interpreter, weshalb es besser ist Git als Versionskontrollsystem zu verwenden.
+\end{document}
