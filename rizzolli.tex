@@ -1,0 +1,126 @@
+\documentclass[a4paper]{article}
+\usepackage{ngerman}
+\usepackage[utf8]{inputenc}
+
+
+\title{Gradle}
+\author{Thomas Rizzolli}
+\date{Mai 2015}
+
+\begin{document}
+
+\maketitle
+
+\section{Was ist Gradle}
+Gradle ist ein Build-Managemant Tool wie Maven, dass in Java geschrieben wurde. Anders als Maven verwendet Gradle Groovie um die zu bauenden Projekte zu beschreiben. Im Gegensatz zu Maven, das XML verwendet, sind Gradle-Skripts direkt ausführbarer Code.
+
+Gradle wurde für Builds von Projekten konzipiert, die aus einer Vielzahl von Unterprojekten besteht.
+Da Builds umfangreicher Projekte sehr viel Zeit in Anspruch nehmen, unterstützt Gradle sowohl inkrementelles(st"uck f"ur st"uck) als auch Bauen der Software durch parallel ablaufende Build-Prozesse. Dadurch k"onnen nur Teile eines Projektes gebaut werden, die ge"andert wurden, ohne das Ganze Projekt neu bauen zu m"ussen. Des Weiteren k"onnen Tests parallel zum laufenden Build gestartet werden. Dadurch wird die Geschwindigkeit des Bauens des Projektes um ein Vielfaches erh"oht
+
+Gradle wird von einigen bekannten Frameworks für deren Build eingesetzt – darunter Hibernate, Grails, Groovy sowie Spring Integration und Spring Security. Seit Mitte 2013 hinzugekommen ist das Android-System. Seitdem wird das Tool vor allem ausgebaut zur Unterstützung zum Bau sogenannter ``nativer'' Systeme, welche nicht auf der Java-Plattform basieren. Unterstützt werden hier die Programmiersprachen C++, C, Objective C und Assembler.
+
+\section{Aufbau}
+In Gradle braucht man in den meisten F"allen nur die build.gradle Datei. Gradle verf"ugt jedoch "Uber 2 weitere Dateien, die aber nicht unbedingt erforderlich sind.
+\begin{itemize}
+\item build.gradle - enth"allt die Definition der Tasks und der ganzen Abh"angigkeiten des Projektes
+\item settings.gradle - hier werden die teilnehmenden Unterprojekte eines Multiprojekts definiert.
+\item gradle.properties - enth"allt eine Liste von Eigenschaften f"ur eine projektspezifische Gradle-Initialisierung eines Builds
+\end{itemize}
+
+Weiteres wird in Gradle zwischen Tasks und Eigenschaften(Properties) unterschieden.
+
+Tasks sind ausf"uhrbarer Code, der "uber die Kommandozeile aufgerufen wird, indem man dort ``gradle [den auszuf"uhrenden Task]'' eingibt.
+
+Durch Properties werden die Eigenschaften des Builds, wie z.B. Pfad der Klassen und Abh"angigkeiten definiert werden. Eigenschaften k"onnen in zwei verschiedenen Weisen definiert werden:
+\begin{enumerate}
+\item \begin{verbatim}
+sourceSets.main.java.srcDir "src/main/java"
+\end{verbatim}
+\item \begin{verbatim}
+sourceSets{
+    main{
+        java{
+            srcDir "src/main/java"
+        }
+    }
+}
+\end{verbatim}
+\end{enumerate}
+Beide Schreibweisen funktionieren, wobei meistens eine Kombination von 1. und 2. bevorzugt wird.
+\section{Einfache Grundtasks}
+Das Build-Script wird in der ``build.gradle'' geschrieben.
+
+Zum Anfang ein einfaches Hello-World Programm:
+
+In der build.gradle:
+
+\begin{verbatim}
+task helloworld {
+    String hallo = 'Hallo'
+    String welt = ' Welt!'
+    println hallo + welt.toUpperCase()
+}
+\end{verbatim}
+
+\section{Erstellen eines einfachen Java-Builds}
+Wie bei den Tasks, werden auch Build-Scripts in der build.gradle definiert:
+
+\begin{verbatim}
+apply plugin: "java"
+
+sourceSets {
+    main.java.srcDir "src/main/java"
+}
+
+jar {
+    manifest.attributes "Main-Class": "net.tfobz.test.Test"
+}
+\end{verbatim}
+\begin{itemize}
+\item Als erstes wird apply plugin: java gesetzt, damit Gradle mit Java-Projekten überhaupt umgehen kann.
+\item Durch sourceSets.main.java.srcDir , kann der Pfad für die Java-Packages gesetzt werden. Wird diese Eigenschaft nicht gesetzt, dann wird standartm"asig ``src/main/java'' als Pfad gew"ahlt.
+\item Die Eigenschaft jar.manifest.attributes erg"anzt die Manifest-Datei mit den gesetzten Attributen(in diesem Fall der Pfad der Main-Klasse).
+\end{itemize}
+\subsection{JUnit-Tests mit Gradle durchf"uhren}
+Die Tests werden in Gradle, "ahnlich wie in Maven, getrennt vom Quellcode abgelegt. Standardm"a"sig ist der Pfad ``src/main/test'' eingestellt. Man kann diesen Pfad aber, wie es auch im vorherigen Beispiel gemacht wurde, "andern.
+
+Folgendes Beispiel soll zeigen, wie man JUnit in seinem Projekt integrieren kann:
+\begin{verbatim}
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main.java.srcDir "src/main/java"
+    test.java.srcDir "src/main/test"
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
+
+test {
+    testLogging {
+        events 'started', 'passed', 'failed'
+    }
+}
+\end{verbatim}
+\begin{itemize}
+\item Die Funktion mavenCentral() in der Eigenschaft repositories holt die erforderlichen Bibliotheken f"ur JUnit(Internetverbindung erforderlich).
+\item In sourceSets.test.java.srcDir kann der Pfad der JUnit Testklassen ge"andert werden.
+\item In der Eigenschaft testCompile in dependencies wird die zu verwendende JUnit-Version angegeben.
+\item In der Eigenschaft test.testLogging.events werden die anzuzeigenden JUnit-Meldungen angegeben. Wird z.B. 'failed' weggelassen, so werden die gescheiterten JUnit-Tests nicht in der Konsole ausgegeben (Build schl"agt aber trotzdem fehl).
+\end{itemize}
+
+\subsection{Java Projekt eclipsf"ahig machen}
+Um ein Gradle-Projekt eclipsf"ahig zu machen braucht man nur das Plugin ``eclipse'' hinzuzuf"ugen.
+\begin{verbatim}
+apply plugin: "java"
+apply plugin: "eclipse"
+\end{verbatim}
+
+\begin{itemize}
+\item Gibt man in der Kommandozeile den Befehl ``gradle eclipse'' ein, werden die ben"otigten Dateien f"ur Eclipse erzeugt. Das Projekt an sich wird aber weder compiliert noch getestet.
+\item Mit dem Befehl ``gradle cleanEclipse'' werden die erzeugten Dateien wieder entfernt.
+\end{itemize}
+\end{document}
