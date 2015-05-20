@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{DokuWiki}
+\author{Philipp Rassele}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{DokuWiki}
+\subsection{Was ist DokuWiki?}
+DokuWiki ist eine freie Wiki-Software,die in der Programmiersprache PHP geschrieben und unter der GPL 2 lizenziert wurde. Dokuwiki wurde von Andreas Gohr 2004 ins Leben gerufen. Um Inhalte und Metadaten zu speichern, werden einfache Textdateien genutzt und keine SQL-Datenbanken, wie bei anderen Wiki-Engines. Um die Wikiquellseiten gut leserlich zu halten, werden Inhalt und Metadaten von Wikiseiten bei DokuWiki strikt getrennt. Anfangs zur einfachen Dokumentation von Projekten gedacht, wird Dokuwiki mittlerweile aufgrund seiner Einfachheit und Funktionen für eine Vielzahl von Anwendungen eingesetzt. Auf Basis einer übersichtlichen Struktur lassen sich mit Erweiterungen (Plugins) weitere Funktionen hinzufügen, etwa für Blogs, Mediendaten oder Arbeitsgruppen.
+\subsection{Merkmale}
+\subsubsection{Versionsverwaltung}
+Die Versionverwaltung speichert alle Versionen einer Wikiseite. Es ist möglich, ältere Versionen mit der aktuellen Version zu vergleichen. Außerdem wird verhindert, dass mehrere Benutzer gleichzeitig eine Seite verändern können.
+\subsubsection{Zugriffskontrolle}
+Die Zugriffsrechte lassen sich für Kombinationen von Benutzern, Gruppen und Namespaces vergeben. Die Einstellung ist via Webinterface (Usermanager) oder manuell per Konfigurationsdatei möglich (Access Control List).
+\subsubsection{Add-ons}
+DokuWiki hat einen einfachen Add-on-Mechanismus.Dadurch ist es möglich Erweiterungen (Plugins) in PHP zu schreiben. Es gibt inzwischen eine ganze Reihe an Erweiterungen (>300). Über den Plug-in-Manager können diese über die Web-Oberfläche in das eigene Wiki integriert und verwaltet werden.
+\subsubsection{Templates}
+Das Aussehen des Wikis kann der Administrator über Templates festlegen. Es wurden inzwischen unterschiedliche Templates von der Entwicklergemeinde zur Verfügung gestellt.
+\subsubsection{Internationalisierung}
+Als Standard-Zeichencodierung wird UTF-8 verwnedet. Somit sind auch Sprachen wie Chinesisch, Thai oder Hebräisch darstellbar. Das Wiki selber kann momentan in 39 Sprachen konfiguriert werden.
+\subsubsection{Caching}
+Um den Server des Wikis zu entlasten, speichert ein Cache geparste Seiten. Bei einem erneuten Aufruf der Seite werden die gespeicherten Daten geliefert, anstatt die Wikiseite nochmals zu parsen.
+\subsubsection{Volltextsuche}
+DokuWiki hat eine Volltextsuche integriert, mit der in dem gesamten Wiki nach Stichwörtern gesucht werden kann.
+\subsubsection{WYSIWYG-Editor}
+Der Wiki-Philosophie einer einfachen Markup-Syntax entsprechend hat DokuWiki in der Grundausstattung keinen WYSIWYG-Editor. Diese Funktion kann aber über ein Plugin nachgerüstet werden; alternativ gibt es eine Quickbuttonleiste ähnlich MediaWiki.
+\subsubsection{Datenspeicherung}
+DokuWiki speichert alle Daten (aktuelle und alte Seiteninhalte, Indizes, Caches) in Textdateien. Dadurch ist keine separat laufende Datenbank (etwa MySQL) notwendig.
+\subsubsection{Versionierung/Synchronisation}
+Jede Wiki-Seite wird in einer Textdatei im Verzeichnis dokuwiki-JJJJ-MM-TT/data/pages gespeichert, der Name der Datei bleibt trotz Versionierung gleich. Vorherige Versionen befinden sich unter dokuwiki-JJJJ-MM-TT/data/attic. Es erfolgt kein Umbenennen/Neuanlegen der Originaldatei (z. B. Revision00011, Revision00012). Dies macht Dokuwiki ideal für Synchronisations-Tools mit beidseitigem Abgleich und diff-Funktion wie Unison.
+\subsubsection{Portable Version}
+Für Windows-Rechner ist DokuWiki auch als portable Version zusammen mit einem portablen Apache Webserver für die Verwendung auf einem USB-Stick vorhanden.
+\subsubsection{HTML5}
+Seit Release 2012-10-13 ``Adora Belle'' parst DokuWiki HTML5-Seiten. 
+\linebreak\linebreak 
+Weitere Information über DokuWikie und \"ahnlicher Software findet man auf http://www.wikimatrix.org/.
+\end{document}
