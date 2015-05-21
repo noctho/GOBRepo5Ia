@@ -1,0 +1,24 @@
+Internet Relay Chat (oder kurz IRC) bezeichnet ein vollkommen textbasiertes Chat-System. Hier treffen sich die Teilnehmer in sogenannten Channels und können in diesen Channels miteinander schreiben. Jeder Benutzer kann jederzeit einen neuen Channel erstellen. Außerdem ist es möglich sogenannte Querys zu erstellen, welche die Kommunikation zwischen nur zwei Gesprächsteilnehmern ermöglicht.
+
+\subsection{Geschichte}
+
+Die erste Version eines solchen Chat-Netzwerks entstand 1985 im BITNET, einem Netzwerk von Großrechnern in den USA. Damals noch unter dem Namen Relay Chat. Zwei Studenten von der Universität Oulu, in Finnland übertrugen dieses System 1988 auf das Internet. Die erste Version dieses Chat-Netzwerks erlangte schnell Beliebtheit, sodass bald weitere Unabhängige IRC Netze entstanden.
+
+\subsection{Allgemein}
+
+Ein IRC-Netzwerk besteht aus mehreren miteinander verbundenen Servern, welche auch Relay-Station genannt werden. Jeder Chat Teilnehmer verbindet sich immer mit einem Server und klingt sich somit in das Netz ein. Ein besonderes Merkmahl des IRC-Netzwerks ist, dass zwischen zwei Teilnehmern des Chats immer nur eine Verbindung besteht. Dies war historisch sehr bedeutsam, da früher die Leitungskapazität sehr begrenzt war. So wird jede Nachricht die von den Benutzern, die mit einem Server verbunden sind, nur über einen Kanal an einen weiteren Server und somit an deren Teilnehmer geschickt. Dieser Server schickt seine Nachricht daraufhin an den nächsten Server weiter. Diese Funktionsweise sorgt für eine sehr geringe Menge an Datenverkehr, jedoch fehlt gleichzeitig jede Art von Redundanz. So kann es beim Ausfall eines Servers passieren, dass sich ein Netz in zwei kleinere Netze aufspaltet zwischen denen keine Verbindung mehr besteht.
+
+\subsection{Technische Eigenschaften}
+
+IRC ist ein auf IP und TCP basierendes Protokoll. Die gesamte Kommunikation besteht aus Textnachrichten mit einer maximalen Länge von 512 Zeichen. Diese Textnachrichten enthalten einen Absender, einen Befehl und je nach Befehl eventuelle Befehlsparameter. Auf einen Befehl kann eine Antwort des Servers folgen, dies ist jedoch von Befehl zu Befehl und von Server zu Server unterschiedlich. Im Laufe der Zeit entwickelten sich außerdem verschiedene Erweiterungen zum IRC Protokoll, welche unter anderem den Aufbau der Nachrichten ändern. 
+
+\subsection{Verschlüsselung}
+
+Ob und wie Nachrichten verschlüsselt werden ist von Netz zu Netz unterschiedlich. In den meisten Fällen wird entweder gar nicht verschlüsselt oder eine über SSL/TLS verschlüsselte Verbindung benutzt. Verschiedene Erweiterungen benutzen hier ebenfalls verschiedene Verschlüsselungen.
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{Ircnetz.png}
+  \caption{Schematischer Aufbau eines IRC-Netzes.}
+  \label{abb:Ircnetz}
+\end{figure}
+
