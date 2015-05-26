@@ -1,0 +1,39 @@
+\section{Bugzilla}
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.5]{buggie.png}
+  \caption{Logo von Bugzilla}
+  \label{fig:bugzilla}
+\end{figure}
+
+\subsection{Allgemeines}
+Bugzilla ist ein Bugtracker, welcher zur Dokumentation und Erfassen von Programmfehlern zuständig ist. Der Name setzt sich aus Bug und Mozilla zusammen, was so viel bedeutet wie „Käfer Internet-Software“.
+Das Programm ist in Perl geschrieben und steht unter der Mozilla Public License und ist somit kostenlos.
+Perl wurde 1987 von Larry Wall entworfen und ist eine Programmiersprache, welche im Gegensatz zu anderen Programmiersprachen viele Freiheiten bietet. 
+Die Mozilla Public License (MPL) ist eine Copyleft-Lizenz.
+Zur Benutzung von Bugzilla wird ein Webbrowser benötigt, da Bugzilla wie eine Webseite funktioniert und über HTML aufgebaut ist. Sie ist englisch, jedoch können weitere Sprachpakete dazu installiert werden. Es kann zwischen drei verschiedenen Datenbanksystemen gewählt werden.
+Somit kann Bugzilla auf jedem Betriebssystem laufen, jedoch muss eine Perl-Distribution, ein Webbrowser und ein Datenbanksystem vorhanden sein.
+Bugzilla wird von viele Open-Source-Projekten verwendet um beispielsweise Fehlermeldungen oder Wünsche von Benutzern zu sammeln. 
+
+\subsection{Geschichte}
+Bugzilla wurde von Netscape entwickelt um Softwareverfolgungen auszuführen, wo der Quelltext noch nicht offengelegt war. Seit 2007 gibt es die Version 3.0, wo auch die Unicoce-Unterstützung integriert wurde.
+
+\subsection{Funktionsweise}
+
+\subsubsection{Bugs reporten}
+Zuerst muss man die Suchbegriffe in das Suchfeld eingeben. Hier findet man nun Bugs, für die bereits eine Lösung gefunden wurde und weist dann auf die alte Frage hin.
+Kennt man sich bereits etwas besser mit Latex aus, so kann man auf die unübersichtliche Query Page gehen. Wenn man weiß, welche Komponente für den Bug verantwortlich ist, kann man nun beispielsweise auf das OS beschränken oder ein gewisses Programm auswählen, welches zum Bug führte. 
+Falls man einen Bug aber gar nicht finden kann, ist es wichtig dass man den Bug sorgfältig beschreibt und meldet. Dazu gibt es den Bugzilla Helper, der einen hilft den Bug zu melden und einige Hinweise gibt, worauf man achten muss. Wichtig ist hier vor Allem die Version, welche verwendet wird. Zum Unterpunkt „Summary“ kann man „Buzzwords“ hinschreiben. Somit werden die vorher benutzten Suchbegriffe für den Bug auch in diesen hineingeschrieben und vereinfachen später die Suche. Nun soll man eine genaue Problembeschreibung angeben und es soll selbst reproduzierbar sein, damit der Helfer genauestens Bescheid weiß. 
+Beim letzten Schritt ist anzugeben, was genau passiert ist und was eigentlich passiert hätte sollen. 
+Je besser der Report beschrieben wird, umso leichter kann er bestätigt werden.
+
+\subsubsection{Bearbeiten anderer Bugs}
+Da man bei Bugzilla einen Account erstellen muss, darf man meistens nur die eigens gemeldeten Bugs bearbeiten. Andere Nutzer können alles ändern.
+
+\subsubsection{Selber gemeldete Bugs}
+Sobald man einen Bug nun gemeldet hat erhält er den Status UNCONFIRMED. Einige Helfer schauen meistens so gut wie möglich zu helfen: Verbesserungen an der Zusammenfassung des Problems vornehmen, andere Komponenten angeben, usw.
+Sobald er dann von einem dieser bestätigt wird erhält er den Status NEW. Wenn jetzt jemand das Problem behandelt, bekommt der Bug den Status ASSIGNED. Falls der Bug nicht reproduzierbar ist, bekommt er den Status WORKSFORME und wenn der Bug schon bereits gemeldet wurde, so erhält er den Status DUPLICATE. Es kann auch sein, dass es kein Bug ist. Somit wird der Status zu INVALID. Wenn einige Bugs nicht behoben werden wollen, so bekommen sie den Status WONTFIX. Sobald man die Lösung bestätigt, wird der Status von RESOLVED zu VERIFIED.
+Wenn jemand die Meldungen nicht genau versteht bekommt man meistens Fragen. Diese bekommt man weil beispielsweise, weil der Helfer nicht genau versteht, wie der Fehler zustande kommt.
+
+\subsubsection{Bugs, die andere Nutzer gemeldet haben}
+Manchmal kann man auch zu anderen Bugs etwas beitragen, jedoch sollten diese Beiträge hilfreich sein. Hier kann z.b. helfen, dass man den Bug mit einer anderen Version nachvollziehen oder auch nicht nachvollziehen kann.
