@@ -1,0 +1,50 @@
+\section{Odoo}
+
+\subsection{Was ist Odoo - mehr als OpenERP}
+OpenERP heißt - wie bekannt - seit einigen Tagen Odoo. Was bedeutet das und warum hat es diese Namensänderung gegeben?
+
+\subsection{Was bedeutet Odoo?}
+Soweit wir wissen, hat das Wort Odoo keine wirkliche Bedeutung. Einige behaupten, dass Odoo das Kürzel von 
+On Demand Open Object ist. Andere leiten es - mehr oder weniger direkt – von On Demand (SaaS) Offer from OpenERP ab.
+Die offizielle Verlautbarung zum Namen Odoo besagt, dass Firmen mit mehr "O" im Namen einen höheren Marktwert 
+haben und deshalb sind 3 Os ein gutes Omen!
+Ganz sicher aber gibt es einen sehr präzisen und praktischen Grund für die Einführung des Namens Odoo, nämlich den Wunsch,
+die Entwicklung vom einfachen und reinen ERP zu einem umfassenderen Angebot von Dienstleistungen und Tools für Unternehmen 
+zu verdeutlichen. Dieses wird in der Modalität SaaS geliefert bzw. in der Version open source community edition zur 
+Verfügung gestellt. Odoo ist, wie es Fabien Pinckaers, Gründer von OpenErp in einem Post geschrieben hat, eine Suite von 
+Business Apps und kein einfaches ERP.
+
+\subsection{Website Builder und e-Commerce: Echte Neuheiten von Odoo.}
+Wer schon Erfahrung mit den vorhergehenden Versionen von OpenERP haben sollte, dem werden die beiden echten Neuheiten von 
+Odoo auffallen, d.h. der Website Builder (ein integriertes, wenn auch noch ausbaufähiges CMS) und der mit dem ERP 
+integrierte e-Commerce Motor (die Online-Verkäufe sind also direkt mit der Lieferantenverwaltung, den Kunden, 
+dem Einkauf, dem Verkauf, dem Lager, dem Rechnungswesen usw.) verbunden.
+Alle anderen Funktionen (Projektmanagement, Personalverwaltung usw.) waren schon in OpenERP vorhanden, und zwar als 
+Module (ab einem gewissen Zeitpunkt dann als App, für die Version SaaS), die bei Bedarf installiert werden konnten.
+
+\subsection{Odoo wird weiterhin mit Open Source Lizenz ausgegeben.}
+Odoo kann weiterhin frei genutzt werden. Sie müssen nur das Paket von der Webseite herunterladen, können Odoo 
+aber auch in Modalität SaaS benutzen, wobei Sie direkt die Server von OpenErp SA verwenden (für nur zwei Abnehmer 
+ist die Dienstleistung kostenfrei). In beiden Fällen benutzen Sie exakt die gleiche Software. 
+Die neue Aufgabe von Odoo ist es, dem Unternehmen ein einziges Tool zu geben, das auf alle Firmenbedürfnisse 
+antwortet (ERP aber auch Webseiten und e-Commerce), ohne verschiedene Software zu benutzen, die untereinander 
+integriert werden müssen
+Wenn man die historische Entwicklung von OpenErp nach Odoo verfolgt, dann hat bei OpenERP die Erneuerung des 
+herkömmlichen ERP schon ab der Version 7.0 begonnen. Dabei wurden Möglichkeit der Zusammenarbeit im Sinne der 
+Social Media eingefügt, um die Leistungen dort zu steigern, wo das Teilen von Geschäftsinformationssystemen 
+(E-Mail, File-sharing...) verhindert wurde.
+Im Klartext: Odoo ist genau das, was die OpenERP Version 8 gewesen wäre, allerdings mit den neuen Zusatzmodulen. 
+So hat man also den Übergang zu einer noch offeneren und auf integrierter Zusammenarbeit beruhenden Lösung.
+
+\subsection{Hinweis für die Entwickler.}
+Ein wichtiger technischer Hinweis für die Entwickler: Mit dem Übergang zur Version 8 erfolgt die Transition von 
+Launchpad nach GitHub. Die Terminologie ändert sich: Es wird "master" anstelle von "trunk" verwendet. 
+Der Übergang zu GitHub deshalb, weil Git schneller und GitHub besser organisiert ist. Außerdem bleibt Odoo, 
+obwohl dem Namenswechsel das Wort Open zum Opfer gefallen ist, in jedem Fall Open, weil für den Download der 
+verfügbaren Community Edition weiterhin die Lizenz GNU Affero General Public License bzw. GNU AGPL verwendet wird.
+
+\subsection{Was ist die Aufgabe von Odoo?}
+Wenn wir also das "warum" von Odoo kurz zusammenfassen wollen, dann können wir mit Sicherheit sagen, 
+dass Odoo dem Unternehmen ein einziges und integriertes Tool gibt, das allen Firmenbedürfnissen entspricht 
+(ERP, aber auch Webseitengestaltung und e-Commerce), ohne dass unterschiedliche Software verwendet wird, 
+die anschließend integriert werden muss.
