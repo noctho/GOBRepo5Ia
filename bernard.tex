@@ -1,0 +1,60 @@
+\section{ANT}
+Apache Ant(Ameise), „Another Neat Tool“, ist ein in Java geschriebenes Buildmanagementprogramm. Ein Buildmanagementprogramm(BMP) ist ein Programm, welches zum automatisierten Erzeugen von ausführbaren Computerprogrammen aus existierenden Quelltexten, Bibliotheken und sonstigen Dateien verwendet wird. Ein weiteres Beispiel f"ur ein BMP ist das weitverbreitete MAKE. Ant ist Open Source, startete als Teil des sogenannten Jakarta-Projekts und ist nun ein Apache-Top-Level-Projekt. 
+
+\subsection{Entwicklung}
+Entwickelt wurde die erste Version von James Duncan Davidson, der 1999 ein Werkzeug wie make für Java benötigte. Davidson gilt außerdem als Vater von Tomcat. Für ihn steht der Name „ANT“ dafür, dass es als kleines Programm, genau wie die kleinen Ameisen, Großes leisten kann.
+
+\subsection{Funktion}
+Wie auch bei MAKE wird ANT durch eine XML-Datei, die so genannte Build-Datei, gesteuert. Standartm"a"sig wird diese Build-Datei build.xml genannt. In der Build-Datei wird ein project definiert welches das Wurzelelement der XML-Datei darstellt. Zu einem Software-Projekt sollte immer nur eine Build-Datei und ein ANT-Projekt gehören, um Umordnung zu vermeiden. ANT wird von vielen Java-Werkzeugen unterst"utz und l"asst sich ganz einfach in eigenen Projekte integrieren.
+
+\subsection{Begriffe}
+Targets (Ziele): V ergleichbar mit Funktionen in Programmiersprachen welche von außen über die Kommandozeile oder die Entwicklungsumgebung gezielt aufgerufen werden können.
+
+Abhängigkeiten: Beim Aufrufen eines Targets löst Ant Abhängigkeiten auf und arbeitet die Targets entsprechend ab.
+
+Tasks(Aufgaben): Sie sind vergleichbar mit Befehlen in Programmiersprachen. Tasks können auch selbst erstellt und beliebig erweitert werden.
+
+\subsection{Syntax}
+Da es sich bei der Build-Datei um eine XML-Datei handelt, hängt ihre Bedeutung nicht von Tabulatorzeichen, Leerzeichen oder Pfadtrennzeichen ab, die auf unterschiedlichen Betriebssystemen unterschiedlich definiert sind. Dies ist insbesondere eine Verbesserung gegenüber den von MAKE benutzten Makefiles.
+
+\subsection{Häufig verwendete Tasks}
+Ant enthält über 150 Tasks, wobei man auch eigene Tasks in Java selbst programmieren kann. Diese Liste enthält einige Standarttasks von Ant:
+
+    javac zum Kompilieren von Quellcode.
+    copy zum Kopieren von Dateien.
+    delete zum Löschen von Dateien oder Verzeichnissen.
+    mkdir zum Erstellen von Verzeichnissen.
+    junit für automatisierte (JUnit-)Tests.
+    move zum Umbenennen von Dateien oder Verzeichnissen.
+    exec zum Ausführen von System-Programmen. 
+    zip zum Zippen, also zum Komprimieren von Dateien.
+    cvs zum Durchführen von CVS-Operationen.
+    mail zum Versenden von E-Mails.
+    replace zum Ersetzen von Text in Dateien.
+
+\subsection{Beispiele}
+<?xml version="1.0"?>
+ <project name="Demo" basedir="." default="build">
+  <property name="build.classes" value="bin" />
+  <property name="build.lib" value="lib" />
+  <property name="java.dir" value="." />
+  <property name="name" value="Wikipedia-Demo" />
+  <property name="manifest" value="manifest" />
+ 
+  <path id="classpath">
+      <pathelement location="." />
+   </path>
+ 
+  <!-- Anwendung bauen  -->
+  <target name="build" depends="clean" description="Baut die komplette Anwendung">
+    <!-- Verzeichis anlegen -->
+    <mkdir dir="${build.classes}"/>
+ 
+    <!-- Quelltext kompilieren -->
+    <javac srcdir="${java.dir}"
+           destdir="${build.classes}"
+           debug="false"
+           deprecation="true"
+           optimize="true" >
+      <classpath refid="classpath" />
+    </javac>
