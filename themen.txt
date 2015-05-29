@@ -1,19 +1,20 @@
-Vorname Nachname : Thema
++Dominik Berger : Github
+P+Peter Dalvai : Mediawiki 
++Andreas Domanegg : GIT
+P+Andreas Niederegger : Maven
+P+Hannes Oberprantacher : Bitbucket
+P+Philipp Rassele : Dokuwiki
+P+Damian Pirpamer: Trello
+P+Romen Rene : Activiti
+P+Marcel Mussner : IRC
+P+Alexander Niedrist : SourceForge
+P+Christopher Hopfgartner : Bugzilla 
+P+Thomas Nocker : Mercurial
+P+Viktor Gobbi : JIRA
+P+Thomas Rizzolli : Gradle
+P+Bernard Simon : Ant     	
+P+Matthias Prader: Bonita BPM
+P+Daniel Pazeller: SVN
+P+Samuel Rufinatscha: MS Dynamics AX
++Stefan Di Pauli: Odoo 		
 
-Dominik Berger : Github
-Peter Dalvai : Mediawiki
-Andreas Domanegg : GIT
-Andreas Niederegger : Maven
-Hannes Ober... : Bitbucket
-Philipp Rassele : Dokuwiki
-Damian Pirpamer: Trello
-Romen Rene : Activiti
-Marcel Mussner : IRC
-Alexander Niedrist : SourceForge
-Christopher Hopfgartner : Bugzilla 
-Thomas Nocker : Mercurial
-Viktor Gobbi : JIRA
-Thomas Rizzolli : Gradle
-Bernard Simon : Ant
-Matthias Prader: Bonita BPM
-Daniel Pazeller: SVN
